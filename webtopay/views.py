@@ -23,7 +23,7 @@ def _respond(obj, request, err=None):
         obj.send_signals()
     except:
         log.exception("Error processing response")
-    return HttpResponse("OK")
+    return HttpResponse("OK", content_type="text/plain")
 
 @require_GET
 def makro(request):
